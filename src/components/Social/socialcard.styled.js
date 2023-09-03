@@ -5,6 +5,8 @@ export const SocialContainer = styled.div`
   &:hover {
     background-color: #CCFF99;
   }
+  width: 450px;
+  margin: auto;
 `;
 export const Photo = styled.img`
 display: flex;
@@ -13,6 +15,7 @@ width: 150px;
    &:hover {
      width: 170px;
    }
+
  `;
 
 export const HeadText = styled.p`
@@ -39,6 +42,7 @@ list-style-type: none;
 display: flex;
 gap: 10px;
 padding-left: 0;
+justify-content: center;
  `;
 
 export const LiText = styled.li`

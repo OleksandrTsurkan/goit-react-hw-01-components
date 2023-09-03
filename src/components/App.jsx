@@ -1,9 +1,9 @@
-import { SocialCard } from "./Social/Socialcard";
+import { Profile } from "./Social/Socialcard";
 import user from './Social/user.json';
 
 export const App = () => {
   return (
-    <SocialCard
+    <Profile
       username={user.username}
       tag={user.tag}
       location={user.location}
