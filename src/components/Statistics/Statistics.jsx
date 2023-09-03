@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types';
-import { Label, Li, Percentage, Section, SectionName, StatList } from './Stat.styled';
+import {
+  Label,
+  Li,
+  Percentage,
+  Section,
+  SectionName,
+  StatList,
+} from './Stat.styled';
 
-
-export const Statistics = ({stats, title}) => {
+export const Statistics = ({ stats, title }) => {
   return (
     <Section>
       {title && <SectionName>{title}</SectionName>}
@@ -21,8 +27,7 @@ export const Statistics = ({stats, title}) => {
   );
 };
 
-
 Statistics.prototype = {
-    title: PropTypes.string,
-    stats: PropTypes.arrayOf(PropTypes.object,),
-}
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(PropTypes.object),
+};
