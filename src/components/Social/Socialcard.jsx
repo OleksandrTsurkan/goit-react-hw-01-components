@@ -1,37 +1,43 @@
 import { HeadText, LiText, LocationText, Photo, SocialContainer, TagText, TextSpan, UlText } from './socialcard.styled';
-import data from './user.json';
 
+//import PropTypes from 'prop-types';
 
-export const SocialCard = () => {
- return data.map(data => {
- return (<SocialContainer className="profile" key={data.id}>
+export const SocialCard = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
+  return (<SocialContainer className="profile" >
      <div className="description" >
     <Photo
-      src={data.avatar}
+      src={avatar}
       alt="User avatar"
       className="avatar"
     />
-         <HeadText className="name">{data.username}</HeadText>
-         <TagText className="tag">{data.tag}</TagText>
-         <LocationText className="location">{data.location}</LocationText>
+         <HeadText className="name">{username}</HeadText>
+         <TagText className="tag">{tag}</TagText>
+         <LocationText className="location">{location}</LocationText>
   </div>
 
   <UlText className="stats">
     <LiText>
       <TextSpan className="label">Followers</TextSpan>
-      <TextSpan className="quantity"> {data.stats.followers}</TextSpan>
+      <TextSpan className="quantity"> {followers}</TextSpan>
     </LiText>
     <LiText>
       <TextSpan className="label">Views</TextSpan>
-      <TextSpan className="quantity"> {data.stats.views}</TextSpan>
+      <TextSpan className="quantity"> {views}</TextSpan>
     </LiText>
     <LiText>
       <TextSpan className="label">Likes</TextSpan>
-      <TextSpan className="quantity"> {data.stats.likes}</TextSpan>
+      <TextSpan className="quantity"> {likes}</TextSpan>
     </LiText>
   </UlText>
-     </SocialContainer>);
-});
+     </SocialContainer> );
 };
+
+
 
 console.log(SocialCard);
