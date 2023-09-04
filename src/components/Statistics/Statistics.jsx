@@ -6,7 +6,7 @@ import {
   Section,
   SectionName,
   StatList,
-} from './Stat.styled';
+} from './Statistics.styled';
 
 export const Statistics = ({ stats, title }) => {
   return (

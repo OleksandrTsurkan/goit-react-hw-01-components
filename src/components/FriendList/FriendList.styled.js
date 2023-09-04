@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 
-export const FriendListi = styled.ul`
+export const FriendListic = styled.ul`
   margin: 50px auto;
   display: flex;
   flex-direction: column;

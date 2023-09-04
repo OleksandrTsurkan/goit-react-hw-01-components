@@ -7,7 +7,7 @@ import {
   TagText,
   TextSpan,
   UlText,
-} from './socialcard.styled';
+} from './Profile.styled';
 
 import PropTypes from 'prop-types';
 
@@ -56,5 +56,3 @@ Profile.propTypes = {
     likes: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-// console.log(SocialCard);

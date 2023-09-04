@@ -1,10 +1,10 @@
-import { Profile } from './Social/Socialcard';
-import user from './Social/user.json';
+import { Profile } from './Profile/Profile';
+import user from 'data/User.json';
 import { Statistics } from './Statistics/Statistics';
-import data from './Statistics/stat.json';
-import friends from './FriendList/Friend.json';
+import data from 'data/Stat.json';
+import friends from 'data/Friend.json';
 import { FriendList } from './FriendList/FriendList';
-import transactions from './TransactionHistory/transaction.json';
+import transactions from 'data/Transaction.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 
@@ -18,7 +18,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics stats={data} />
+      {/* <Statistics stats={data} /> */}
       <Statistics stats={data} title="Upload stats" />
       <FriendList friends={friends} />;
       <TransactionHistory items={transactions} />;
@@ -27,12 +27,3 @@ export const App = () => {
 };
 
 export default App;
-
-//==========
-// import { Card } from './Card/Card'
-
-// const App = () => {
-//   return (
-//     <Card isOnline/>
-//   )
-// }
